@@ -1,0 +1,88 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.show-offer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+}
+
+.offer-btn {
+  cursor: pointer;
+  height: 40px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  width: 150px;
+  background-color: black;
+  color: aliceblue;
+}
+
+.modal-overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgb(184, 179, 179);
+
+  display: flex;               /* center modal */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-header-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;   /* right ke jagah left */
+  font-size: 18px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.modal-footer-btn {
+ width: 100%;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+ font-size: 20px;
+ :hover 
+}
+
+
+.modal-footer-btn:hover,
+.modal-header-btn:hover,
+.offer-btn:hover
+ {
+ background-color: gray;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+  position: relative;
+  z-index: 1000;               overlay ke upar content
+}
+
+.modal-body{
+  height: 130px;
+  margin-top: 40px;
+  font-size: 20px;
+  padding: 18px
+}
+
+
+<div className="modal-overlay"></div>
+<div className="modal-content">
+  <button className="modal-header-btn">X</button>
+  <div className="modal-body">modal-body</div>
+  <button className="modal-footer-btn">Accept Offer</button>
+</div>
